@@ -64,8 +64,6 @@ void Backpack::assignItem(CustomerRequirement customerRequirement) {
     }
 
     items = new Item[item_length];
-
-    // int inventory_length = malloc_usable_size(storeInventory) / sizeof(Item);
     for(int i=0;i<item_length;i++){
         for(int j=0;j<INVENTORY_SIZE;j++){
             if (temp_items[i].equals(storeInventory[j])){
@@ -130,8 +128,6 @@ void Backpack::print() {
     Item item_null;
     for(int i=0;i<NUM_ZONES;i++){
         cout << "Zone " << i << endl;
-
-        // int zone_size = 2;
         for(int j=0;j<ZONE_SIZE;j++){
             if(!zones[i][j].equals(item_null)){
                 cout << '\t';
